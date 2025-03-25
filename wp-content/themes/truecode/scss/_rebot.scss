@@ -1,0 +1,131 @@
+@use 'variables' as *;
+@use './mixins/breakpoints' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    font: var(--base-font-weight) var(--base-font-size)/var(--base-line-height) var(--base-font-family);
+    height: 100%!important;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    // scroll-padding-top: var(--headerHeight)
+}
+
+body {
+    --siteMaxWidth: 1920px;
+    --siteMinWidth: 360px;
+
+    -webkit-overflow-scrolling: touch;
+    background-color: var(--c-light);
+    color: var(--c-text);
+    font: inherit;
+    min-height: inherit;
+    min-width: var(--siteMinWidth);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    // padding-top: var(--headerHeight);
+    scroll-behavior: smooth
+}
+
+main {
+    overflow: hidden;
+    position: relative;
+}
+
+p {
+    margin: 0 0 var(--spacing-unit);
+}
+  
+a {
+    color: var(--c-dark);
+    font-weight: bold;
+    transition: color var(--transition-speed) ease;
+    cursor: pointer;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+/* Изображения */
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    --mHeader: var(--m-text);
+    --headerFontWeight: 600;
+    --headerFontSize: 1.5rem;
+    --headerLineHeight: var(--base-line-height);
+    --headerTextColor: var(--c-header-text);
+
+    margin-top: 0;
+    margin-bottom: var(--mHeader);
+    font-weight: var(--headerFontWeight);
+    font-size: var(--headerFontSize);
+    line-height: var(--headerLineHeight);
+    color: var(--headerTextColor);
+
+    @include media-breakpoint-up(lg) {
+        --headerFontSize: 3rem;
+        --mHeader: var(--m-header);
+    }
+}
+  
+h2, .h2 {
+    @include media-breakpoint-up(lg) {
+        --headerFontWeight: 800;
+    }
+}
+  
+h3, .h3 {
+    @include media-breakpoint-up(lg) {
+        --headerFontWeight: 700;
+    }
+}
+  
+h4, .h4 {
+    --headerFontSize: 1rem;
+
+    @include media-breakpoint-up(lg) {
+        --headerFontWeight: 700;
+        --headerFontSize: 1.5rem;
+    }
+}
+  
+h5, .h5 {
+    --headerFontSize: 1rem;
+
+    @include media-breakpoint-up(lg) {
+        --headerFontWeight: 300;
+        --headerFontSize: 2rem;
+    }
+}
+  
+h6, .h6 {
+    --headerFontSize: 1rem;
+
+    @include media-breakpoint-up(lg) {
+        --headerFontWeight: 400;
+        --headerFontSize: 1.5rem;
+    }
+}
+
+.bold, b, strong {
+    font-weight: 700;
+}
+
+small {
+    font-size: .8rem;
+}

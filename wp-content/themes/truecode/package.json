@@ -1,0 +1,17 @@
+{
+    "scripts": {
+        "scss:build": "sass .:./ --no-source-map",
+        "scss:watch": "sass --watch ./scss/:./ --no-source-map",
+        "scss:build-min": "sass .:./ --style=compressed --no-source-map"
+    },
+    "devDependencies": {
+        "@wordpress/scripts": "^30.13.0",
+        "sass": "^1.86.0"
+    },
+    "dependencies": {
+        "@wordpress/block-editor": "^14.15.0",
+        "@wordpress/blocks": "^14.9.0",
+        "@wordpress/components": "^29.6.0",
+        "@wordpress/i18n": "^5.20.0"
+    }
+}

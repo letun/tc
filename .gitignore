@@ -8,9 +8,13 @@
 /wp-admin/
 /wp-content/index.php
 /wp-content/languages
+/wp-content/plugins/
 /wp-content/plugins/index.php
 /wp-content/themes/index.php
 /wp-includes/
+/log/
+/package-lock.json
+/package.json
 /index.php
 /license.txt
 /readme.html
@@ -34,6 +38,12 @@ wp-config.php
 
 # htaccess
 /.htaccess
+
+*node_modules/*
+*package-lock.json
+/wp-content/themes/truecode/node_modules
+/wp-content/themes/truecode/blocks/node_modules
+/wp-content/themes/truecode/package-lock.json
 
 # All plugins
 #

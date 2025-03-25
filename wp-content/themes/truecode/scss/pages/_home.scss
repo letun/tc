@@ -1,0 +1,16 @@
+@use '../mixins/breakpoints' as *;
+
+.gradient {
+    display: none;
+
+    @include media-breakpoint-up(xl) {
+        display: block;
+        position: absolute;
+        left: -30%;
+        bottom: 0;
+        width: 956px;
+        height: 963px;
+        z-index: 1;
+        background: url(./assets/images/gradient.png) no-repeat center center;
+    }
+}

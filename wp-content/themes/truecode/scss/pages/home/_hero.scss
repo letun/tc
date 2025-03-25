@@ -1,0 +1,40 @@
+@use '../../mixins/breakpoints' as *;
+
+.hero {
+    position: relative;
+}
+
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    
+    @include media-breakpoint-up(lg) {
+        justify-content: center;
+        height: 100%;
+        max-width: 530px;
+    }
+}
+
+.hero__images {
+    position: relative;
+}
+
+.hero__image1 {
+    position: relative;
+
+    img {
+        width: 363px;
+        height: auto;
+    }
+}
+
+.hero__image2 {
+    position: absolute;
+    top: 11%;
+    right: -54%;
+    
+    img {
+        width: 620px;
+        height: auto;
+    }
+}

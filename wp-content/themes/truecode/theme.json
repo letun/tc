@@ -1,0 +1,12 @@
+{
+    "version": 1,
+    "settings": {
+        "custom": {
+            "social-icons": {
+                "vk": { "title": "VK", "filename": "vk" },
+                "in": { "title": "Instagram", "filename": "in" },
+                "fb": { "title": "Facebook", "filename": "fb" }
+            }
+        }
+    }
+}
